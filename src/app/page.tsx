@@ -1,16 +1,21 @@
+import Image from "next/image";
+import { Video } from "./components/Video";
+
 export default function Home() {
   return (
     <>
-      <div className="mb-24 mt-20 h-150  w-full bg-yellow-100">video</div>
+      <Video />
       <div>
         <div id="pickup" className="mb-24 mt-[-80px] pt-20">
           <div
             className="mb-7 h-14
-         bg-green-50 text-center text-4xl"
+         text-center text-4xl"
           >
             PICK UP
           </div>
-          <div className="h-64 w-full bg-blue-50">picture</div>
+          <div className="grid h-64  w-full grid-cols-9 gap-x-14 bg-blue-50">
+            picture
+          </div>
         </div>
         <div className="mx-auto max-w-6xl px-4 ">
           <div id="feature" className="mb-14 mt-[-80px] pt-20 ">
