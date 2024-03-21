@@ -13,14 +13,14 @@ export const Header = () => {
         <>
           <div>
             <div
-              className=" fixed inset-0 z-10 cursor-pointer bg-gray-900 opacity-75"
+              className=" fixed inset-0 z-20 cursor-pointer bg-gray-900 opacity-75"
               onClick={() => setIsClose(false)}
             />
             <CloseIcon
-              className="fixed right-9 top-5 z-30 size-8 cursor-pointer text-white"
+              className="fixed right-9 top-5 z-40 size-8 cursor-pointer text-white"
               onClick={() => setIsClose(false)}
             />
-            <div className="fixed inset-y-0 left-0 z-20 h-screen  w-80 bg-black px-6 pt-14">
+            <div className="fixed inset-y-0 left-0 z-30 h-screen  w-80 bg-black px-6 pt-14">
               <div className="mb-16 w-full">
                 <ul className="divide-y divide-white border-y border-white">
                   <li className="py-5 text-base text-white">
@@ -100,7 +100,7 @@ export const Header = () => {
           </div>
         </>
       )}
-      <header className="fixed top-0  h-20 w-full bg-white">
+      <header className="fixed top-0 z-10  h-20 w-full bg-white">
         <div className="mx-9 my-5 flex items-center justify-between">
           <Link href="/">
             <Image

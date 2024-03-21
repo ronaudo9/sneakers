@@ -18,7 +18,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/app/*"]
+      "@/*": ["./src/app/*"],
+      "@splidejs/react-splide": ["./node_modules/@splidejs/react-splide/dist/types/index.d.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
