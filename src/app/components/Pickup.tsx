@@ -50,15 +50,15 @@ export const Pickup = () => {
       >
         PICK UP
       </div>
-      <div className=" relative  h-64 w-full">
+      <div className=" h-64 w-full">
         <Splide options={options}>
           {[...Array(9)].map((_, i) => (
             <SplideSlide key={i}>
               <Image
                 src={`/pickup${i + 1}.jpg`}
                 alt={`Pickup ${i + 1}`}
-                fill
-                style={{ objectFit: "cover" }}
+                width={408}
+                height={256}
               />
             </SplideSlide>
           ))}
