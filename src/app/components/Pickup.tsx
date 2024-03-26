@@ -1,5 +1,6 @@
 "use client";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import dynamic from "next/dynamic";
+import { SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
 
 type Options = {
@@ -22,6 +23,14 @@ type Options = {
   };
 };
 
+const DynamicSplide = dynamic(
+  () => import("@splidejs/react-splide").then((mod) => mod.Splide),
+  {
+    ssr: false,
+    loading: () => <p>リロードボタンを押してください...</p>,
+  },
+);
+
 export const Pickup = () => {
   const options: Options = {
     type: "loop",
@@ -42,6 +51,7 @@ export const Pickup = () => {
       },
     },
   };
+
   return (
     <div id="pickup" className="mb-24 mt-[-80px] pt-20">
       <div
@@ -51,7 +61,7 @@ export const Pickup = () => {
         PICK UP
       </div>
       <div className=" h-64 w-full">
-        <Splide options={options}>
+        <DynamicSplide options={options}>
           {[...Array(9)].map((_, i) => (
             <SplideSlide key={i}>
               <Image
@@ -62,7 +72,7 @@ export const Pickup = () => {
               />
             </SplideSlide>
           ))}
-        </Splide>
+        </DynamicSplide>
       </div>
     </div>
   );
